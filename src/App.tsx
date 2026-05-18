@@ -590,12 +590,11 @@ export default function App() {
 
         <footer className="mt-32 pb-16 text-center space-y-6 no-print">
            <div className="flex justify-center gap-4">
-              <div className="w-12 h-12 bg-lump-pink rounded-full border-4 border-lump-black" />
+              <div className="w-12 h-12 bg-red-600 rounded-full border-4 border-lump-black" />
               <div className="w-12 h-12 bg-lump-blue rounded-full border-4 border-lump-black" />
+              <div className="w-12 h-12 bg-lump-green rounded-full border-4 border-lump-black" />
               <div className="w-12 h-12 bg-lump-yellow rounded-full border-4 border-lump-black" />
            </div>
-           <p className="font-heading text-2xl sm:text-3xl text-lump-black uppercase tracking-widest">© 2026 HUMP LUMP THEATRE</p>
-           <p className="font-comic text-lg opacity-50">High-class portfolio for a first-class production.</p>
         </footer>
 
       </div>
