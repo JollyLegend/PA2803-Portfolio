@@ -310,7 +310,7 @@ export default function App() {
              </div>
              <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-6 sm:space-y-8 opacity-90">
                <p>
-                 This portfolio documents the culmination of my training in PA2803 at the University of Winchester, tracing the evolution of my devising practice across two semesters. It charts a critical journey from the initial challenges of site-specific improvisation in <span className="italic text-lump-blue">The Strange Undoing of Prudencia Hart</span> to the formation of Hump Lump, a dedicated devised theatre company.
+                 This portfolio documents the culmination of my training in PA2803 at the University of Winchester, tracing the evolution of my devising practice across two semesters. It charts a critical journey from the initial challenges of site-specific improvisation in <span className="italic text-lump-blue underline">The Strange Undoing of Prudencia Hart</span> to the formation of Hump Lump, a dedicated devised theatre company.
                </p>
                <p>
                  By synthesizing academic theory with rigorous practical exploration, this document outlines how I transformed critical feedback regarding dramaturgical focus into a deliberate, physical methodology rooted in Rough Theatre, clowning, and political satire.
@@ -388,61 +388,109 @@ export default function App() {
                   <h3 className="font-heading text-3xl sm:text-6xl text-lump-black mb-10 uppercase text-center sm:text-left underline underline-offset-8 decoration-lump-yellow">PROJECT SYNOPSIS</h3>
                   <div className="font-comic text-xl sm:text-3xl leading-relaxed space-y-8">
                      <p>
-                       <span className="font-black italic">6 or 7 Skits</span> is a political and social satire created by Hump Lump, a devised theatre company exploring how world events can be reimagined through clowning, rough theatre and absurd performance. Each skit responds to a real-life event, using satire to expose contradictions and discomfort.
+                       <span className="font-black italic">6 or 7 Skits</span> is a political and social satire created by Hump Lump, a devised theatre company exploring how world events can be reimagined through clowning, rough theatre and absurd performance. The piece is structured as a non-linear sketch show made up of six, maybe seven, short skits. Each skit responds to a real-life political, social or pop-cultural event, using satire to expose the ridiculousness, contradictions and discomfort already present in the world around us.
                      </p>
                      <p>
-                       The performance is framed as a "play within a play," where literal clowns enter a theatrical playground to act out real-world figures, public narratives and media events. Rather than presenting these stories through realism, Hump Lump uses exaggeration, disruption and play to make familiar events feel strange again.
+                       The performance is framed as a "play within a play," where literal clowns enter a theatrical playground to act out real-world figures, public narratives and media events. Rather than presenting these stories through realism, Hump Lump uses exaggeration, disruption and play to make familiar events feel strange again. 
                      </p>
+                     <p>
+                       This allows the audience to encounter subjects they may already feel desensitised to, but from a new and uncomfortable angle.
+                     </p>
+                  </div>
+               </div>
+
+               {/* NEW SECTIONS: STYLE & FORM, MASCULINITY, ULTIMATE GOAL */}
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+                  <div className="border-6 border-lump-black p-8 rounded-[2rem] bg-lump-blue/5">
+                     <h3 className="font-heading text-2xl sm:text-4xl text-lump-blue mb-6 uppercase">STYLE & FORM</h3>
+                     <p className="font-comic text-lg sm:text-2xl leading-relaxed opacity-80">
+                        The company’s style combines clowning, rough theatre, verbatim material, puppetry, absurdism, repetition and musicality. Traditional clown archetypes such as the Whiteface, Auguste and Hobo/Tramp inform the company’s character work, while rough theatre shapes the live, exposed and deliberately imperfect quality of the performance. Costume changes happen in view, the fourth wall is broken, and the audience are treated as active witnesses rather than passive observers.
+                     </p>
+                  </div>
+                  <div className="border-6 border-lump-black p-8 rounded-[2rem] bg-lump-pink/5">
+                     <h3 className="font-heading text-2xl sm:text-4xl text-lump-pink mb-6 uppercase">MASCULINITY</h3>
+                     <p className="font-comic text-lg sm:text-2xl leading-relaxed opacity-80">
+                        Thematically, the work is connected through masculinity. As four male performers, the company uses satire to question the performance of male power, authority, ego, control and fragility across political and cultural spaces. The piece does not aim to provide neat answers. Instead, it creates a space where laughter becomes a way into discomfort, and where the absurdity of real events can be made visible again.
+                     </p>
+                  </div>
+               </div>
+
+               <div className="border-6 border-lump-black p-8 sm:p-12 rounded-[2.5rem] bg-lump-yellow/20 text-center">
+                  <h3 className="font-heading text-3xl sm:text-5xl text-lump-black mb-6 uppercase">ULTIMATE GOAL</h3>
+                  <p className="font-comic text-xl sm:text-4xl leading-relaxed max-w-4xl mx-auto">
+                     Ultimately, <span className="font-black">6 or 7 Skits</span> aims to break through numbness. In a world where contradiction, spectacle and irresponsibility can quickly become normalised, Hump Lump uses clowning and satire to remind audiences that the outrageous should still feel outrageous.
+                  </p>
+               </div>
+
+               {/* TOOLKIT */}
+               <div className="bg-lump-black text-white p-8 sm:p-12 rounded-[2.5rem] border-8 border-white/20">
+                  <h3 className="font-heading text-3xl sm:text-6xl mb-10 uppercase text-center">OUR TOOLKIT</h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-10">
+                     {[
+                        { emoji: "🎭", text: "Clowning & Satire" },
+                        { emoji: "🎈", text: "Rough Theatre" },
+                        { emoji: "🌀", text: "Verbatim Material" },
+                        { emoji: "🎵", text: "Puppetry & Absurdism" },
+                        { emoji: "🥁", text: "Repetition & Musicality" },
+                        { emoji: "🪑", text: "Modular Minimalist Set" }
+                     ].map((item, i) => (
+                        <div key={i} className="flex flex-col items-center gap-2">
+                           <span className="text-4xl sm:text-6xl">{item.emoji}</span>
+                           <span className="font-heading text-sm sm:text-xl uppercase opacity-60">{item.text}</span>
+                        </div>
+                     ))}
                   </div>
                </div>
             </div>
           </section>
         </div>
 
-        {/* PAGE 5: TECHNICAL & RISK ASSESSMENT */}
-        <section className="print-page-break mt-16 sm:mt-56 space-y-16 sm:space-y-32">
+        {/* PAGE 5: TECHNICAL SPECIFICATION */}
+        <section className="print-page-break mt-16 sm:mt-56 space-y-12 sm:space-y-24">
           <div className="text-center">
-             <h2 className="font-heading font-black text-4xl sm:text-8xl p-4 bg-lump-black text-white inline-block uppercase rotate-1">TECHNICAL SPECS</h2>
+             <h2 className="font-heading font-black text-4xl sm:text-8xl p-4 bg-lump-black text-white inline-block uppercase rotate-1">Key Requirements</h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10">
-            {[
-              { label: "SHOW DURATION", value: "45 Minutes", color: "bg-lump-pink" },
-              { label: "SET UP / STRIKE", value: "20 Minutes Each", color: "bg-lump-blue" },
-              { label: "COMPANY SIZE", value: "4 Performers", color: "bg-lump-green" },
-              { label: "HOST FEES & CONTACT", value: "clowns@humplump.com", color: "bg-lump-orange" },
-              { label: "SPACE REQUIRED", value: "8m x 8m x 4m", color: "bg-white" },
-              { label: "PARKING REQUIRED", value: "Space for 1 van", color: "bg-white" },
-              { label: "ACCESS NEEDS", value: "None", color: "bg-white" },
-              { label: "TECH REQUIREMENTS", value: "Fully Self-Sufficient", color: "bg-lump-pink text-white" }
-            ].map((spec, i) => (
-              <div key={i} className={`${spec.color} border-4 border-lump-black p-3 sm:p-6 rounded-2xl shadow-[6px_6px_0_rgba(0,0,0,1)] print:shadow-none print-no-break`}>
-                <h4 className="font-heading text-base sm:text-2xl mb-1 sm:mb-4 uppercase opacity-60 leading-none">{spec.label}</h4>
-                {spec.label === "HOST FEES & CONTACT" ? (
-                  <a href={`mailto:${spec.value}`} className="font-comic text-lg sm:text-3xl font-black break-words underline decoration-2 underline-offset-4 hover:text-white transition-colors">
-                    {spec.value}
-                  </a>
-                ) : (
-                  <p className="font-comic text-lg sm:text-3xl font-black break-words">{spec.value}</p>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 sm:mt-32 border-8 border-lump-black rounded-[2rem] sm:rounded-[3rem] overflow-hidden bg-lump-yellow shadow-[15px_15px_0_rgba(0,0,0,1)] print:shadow-none print:bg-white print:border-6">
-            <div className="p-6 sm:p-10 flex flex-col md:flex-row justify-between items-center gap-6">
-               <h2 className="font-heading font-black text-5xl sm:text-8xl uppercase text-lump-black drop-shadow-[4px_4px_0_rgba(0,0,0,0.1)]">RISK ASSESSMENT</h2>
-               <div className="bg-lump-black text-white px-6 py-3 rounded-full font-heading text-sm sm:text-base tracking-widest uppercase border-4 border-white/20">
-                  Key: L = Likelihood, S = Severity, RS = Risk Score (LxS)
-               </div>
+          {/* Technical Specification - Screenshot Inspired */}
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 py-12">
+            {/* Essentials Box */}
+            <div className="bg-lump-pink p-6 sm:p-10 border-[6px] sm:border-[10px] border-lump-black rounded-[2.5rem] sm:rounded-[3rem] shadow-[0_10px_0_rgba(0,0,0,1)] sm:shadow-[0_15px_0_rgba(0,0,0,1)]">
+              <h3 className="font-heading text-3xl sm:text-5xl mb-6 sm:mb-8 uppercase text-white font-black break-words">Essentials</h3>
+              <ul className="font-comic text-base sm:text-2xl space-y-4 sm:space-y-6 text-white font-bold break-words">
+                <li className="flex items-start gap-2 sm:gap-3">⏱️ <span className="leading-tight"><strong>Duration:</strong> 45 minutes</span></li>
+                <li className="flex items-start gap-2 sm:gap-3">⚡ <span className="leading-tight"><strong>Set-Up/Strike:</strong> 20 mins each</span></li>
+                <li className="flex items-start gap-2 sm:gap-3">🎭 <span className="leading-tight"><strong>Company:</strong> 4 Performers</span></li>
+                <li className="flex items-start gap-2 sm:gap-3">💰 <span className="leading-tight"><strong>Fees:</strong> Contact clowns@humplump.com</span></li>
+              </ul>
             </div>
-            
-            <div className="p-4 sm:p-10 pt-0">
-               {RISKS.map((risk, i) => (
-                 <RiskAssessmentRow key={i} risk={risk} />
-               ))}
+
+            {/* Logistics Box */}
+            <div className="bg-white p-6 sm:p-10 border-[6px] sm:border-[10px] border-lump-black rounded-[2.5rem] sm:rounded-[3rem] shadow-[0_10px_0_rgba(0,0,0,1)] sm:shadow-[0_15px_0_rgba(0,0,0,1)] -rotate-1">
+              <h3 className="font-heading text-3xl sm:text-5xl mb-6 sm:mb-8 uppercase text-lump-blue font-black underline decoration-lump-pink break-words">Logistics</h3>
+              <ul className="font-comic text-base sm:text-2xl space-y-4 sm:space-y-6 text-lump-black font-bold break-words">
+                <li className="flex items-start gap-2 sm:gap-3">♿ <span className="leading-tight"><strong>Access needs:</strong> None</span></li>
+                <li className="flex items-start gap-2 sm:gap-3">🚐 <span className="leading-tight"><strong>Parking:</strong> Space for one van</span></li>
+                <li className="flex items-start gap-2 sm:gap-3">📐 <span className="leading-tight"><strong>Space:</strong> 8m x 8m x 4m</span></li>
+              </ul>
             </div>
-          </div>
+
+            {/* Tech Box */}
+            <div className="bg-[#e74e00] p-6 sm:p-10 border-[6px] sm:border-[10px] border-lump-black rounded-[2.5rem] sm:rounded-[3rem] shadow-[0_10px_0_rgba(0,0,0,1)] sm:shadow-[0_15px_0_rgba(0,0,0,1)] rotate-1">
+              <h3 className="font-heading text-3xl sm:text-5xl text-white mb-6 sm:mb-8 uppercase font-black italic break-words">Tech</h3>
+              <ul className="font-comic text-base sm:text-xl space-y-4 text-white font-bold break-words">
+                <li className="flex items-start gap-2 sm:gap-3">
+                  📢 <span className="leading-tight"><strong>No mics/PA:</strong> Acoustic & live vocal performance.</span>
+                </li>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  💡 <span className="leading-tight"><strong>House lights:</strong> Performs under found/stable light.</span>
+                </li>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  📦 <span className="leading-tight"><strong>Modular Set:</strong> Fully self-sufficient props & racks.</span>
+                </li>
+              </ul>
+            </div>
           </section>
+        </section>
 
         {/* PAGE 6: PRUDENCIA HART & DEVISING PROCESS */}
         <div className="print-page-break mt-32 sm:mt-56 space-y-32 sm:space-y-48">
@@ -457,13 +505,16 @@ export default function App() {
              
              <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-8 opacity-90">
                 <p>
-                  The exploration of David Greig's <span className="italic font-bold">The Strange Undoing of Prudencia Hart</span> served as my introduction to the devising process. Coming from a background of traditional script-work, the absence of a rigid, pre-determined structure initially presented a significant challenge. Alison Oddey (1994) articulates that devised theatre shifts the emphasis away from the single vision of a playwright toward the collective creation of the ensemble. Learning to trust this collective process—and finding my place within it through rigorous improv—required a fundamental shift in my approach to performance, moving away from individual preparation and toward active, moment-to-moment responsiveness.
+                  The exploration of David Greig's <span className="italic font-bold">The Strange Undoing of Prudencia Hart</span> (Greig, 2011) served as my introduction to the devising process. Coming from a background of traditional script-work, the absence of a rigid, pre-determined structure initially presented a significant challenge. Alison Oddey (1994) articulates that devised theatre shifts the emphasis away from the single vision of a playwright toward the collective creation of the ensemble. Learning to trust this collective process—and finding my place within it through rigorous improv—required a fundamental shift in my approach to performance, moving away from individual preparation and toward active, moment-to-moment responsiveness.
                 </p>
                 <p>
-                  A defining element of overcoming this challenge was our immersion into site-specific methodology. As Phil Smith notes, "A site is always the site of something; with the implication that it is a kind of container for what is really important, for the valuable property that is in it but is different from the space itself" (Smith, 2018). We tested this theory practically by taking the text out of the rehearsal room and walking up St. Catherine's Hill.
+                  A defining element of overcoming this challenge was our immersion into site-specific methodology. As Phil Smith notes, "A site is always the site of something; with the implication that it is a kind of container for what is really important, for the valuable property that is in it but is different from the space itself" (Smith, 2018). We tested this theory practically by taking the text out of the rehearsal room and walking up St. Catherine's Hill. Experimenting with scenes using only the natural topography and the elements available on the hill forced a total renegotiation of the actor-audience relationship. We later applied this by experimenting with scenes across various locations on campus. By stripping away traditional lighting rigs and sound systems, the architecture of our surroundings became an active collaborator rather than a passive backdrop.
                 </p>
                 <p>
-                  However, performing in these exposed, site-specific environments revealed vulnerabilities in my practice. A crucial practical lesson learned during this module was the "7-second rule"—the necessity of introducing a new physical, vocal, or spatial shift every seven seconds to actively maintain the audience's attention and keep the work fresh. My PA2803 assessment feedback, which resulted in a 64% grade, highlighted that initially, my creative choices "focused too much on individual needs as opposed to the wider concerns of the play," and that while my staging choices were bold, they occasionally felt "messy" in delivery.
+                  However, performing in these exposed, site-specific environments revealed vulnerabilities in my practice. A crucial practical lesson learned during this module was the "7-second rule"—the necessity of introducing a new physical, vocal, or spatial shift every seven seconds to actively maintain the audience's attention and keep the work fresh. My PA2803 assessment feedback, which resulted in a 64% grade, highlighted that initially, my creative choices "focused too much on individual needs as opposed to the wider concerns of the play," and that while my staging choices were bold, they occasionally felt "messy" in delivery. I struggled to balance the rapid demands of the 7-second rule with a clear dramaturgical focus. It was also noted that it took me too long to identify these issues and adapt.
+                </p>
+                <p>
+                  My marker correctly diagnosed that I needed to step outside the work and critique how the performance was landing from a dramaturgical perspective to allow the audience to truly invest in the piece. Ultimately, the work on Prudencia Hart demonstrated that devised theatre requires intense discipline. Entering Semester 2, addressing this blind spot—learning to execute rapid, engaging shifts without sacrificing the clarity of the story—became the central objective of my work with Hump Lump.
                 </p>
              </div>
           </section>
@@ -478,10 +529,10 @@ export default function App() {
                 <h3 className="font-heading text-3xl sm:text-5xl mb-10 uppercase italic text-lump-black">3.1 STEPPING OUTSIDE THE EGO: THE CLOWN</h3>
                 <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-8">
                    <p>
-                     To actively address my Semester 1 feedback and ensure I was prioritizing the "wider concerns of the play", our company embraced the framework of the 'Personal Clown.' In my previous work, my default instinct was to rely on a "cool, guarded exterior," often using volume or intensity as a defensive armor against true vulnerability.
+                     To actively address my Semester 1 feedback and ensure I was prioritizing the "wider concerns of the play", our company embraced the framework of the 'Personal Clown.' In my previous work, my default instinct was to rely on a "cool, guarded exterior," often using volume or intensity as a defensive armor against true vulnerability. However, unlike traditional character acting, the clown's primary relationship is exclusively with the audience. Demanding what Patsy Rodenburg (2008) defines as the "Second Circle"—a state of genuine, generous exchange where the actor's energy reaches out to touch the listener directly, rather than performing at them.
                    </p>
                    <p>
-                     Through the devising process, I discovered my personal clown persona: the <span className="font-black italic underline">"Outsider."</span> This clown was highly excitable, eager to play, but fundamentally lacked a filter, constantly pushing the boundaries of the ensemble until he went too far. Embracing this foolishness was the ultimate destructuring of my ego.
+                     Through the devising process, I discovered my personal clown persona: the <span className="font-black italic underline">"Outsider."</span> This clown was highly excitable, eager to play, but fundamentally lacked a filter, constantly pushing the boundaries of the ensemble until he went too far. Embracing this foolishness was the ultimate destructuring of my ego. In the final skit, when the Outsider is reprimanded by the group and begins to cry, it abruptly shatters the chaotic comedy we had built. Because I had stripped away my need to sound impressive, I was able to trust my body's spontaneous impulses, dropping into a deeply vulnerable space.
                    </p>
                 </div>
              </div>
@@ -491,10 +542,10 @@ export default function App() {
                 <h3 className="font-heading text-3xl sm:text-5xl mb-10 uppercase italic text-lump-black">3.2 ROUGH THEATRE AND THE TOTAL PLAYGROUND</h3>
                 <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-8">
                    <p>
-                     Our physical methodology was heavily informed by Peter Brook's concept of the "Empty Space" and the aesthetics of Rough Theatre. We stripped away traditional artifice, utilizing an 8x8m empty space, locked clothing racks, and visible costume changes.
+                     Our physical methodology was heavily informed by Peter Brook's concept of the "Empty Space" and the aesthetics of Rough Theatre. We stripped away traditional artifice, utilizing an 8x8m empty space, locked clothing racks, and visible costume changes. In my previous work with Theatre in Education, I struggled to fully embrace the unapologetic, unpolished silliness of Rough Theatre. However, by aligning my sensory, instinct-driven approach with Stella Adler’s demand that an actor focus entirely on external actions and immediate physical circumstances (Balcerzak, 2018), the 8x8m playground became a space of total freedom rather than exposure.
                    </p>
                    <p>
-                     Furthermore, I realized that in modern devising, the "space" of a performance extends far beyond the physical room. Taking on the roles of digital architect and marketer, I built the company website and managed our Instagram presence. This wasn't just administrative work; it was the creation of a fully-fledged online presence—a cohesive ecosystem where festival programmers and audiences can instantly grasp the "vibe" and ethos of Hump Lump.
+                     Furthermore, I realized that in modern devising, the "space" of a performance extends far beyond the physical room. Taking on the roles of digital architect and marketer, I built the company website <span className="underline">humplump.com</span> (Hump Lump, 2026a) and managed our Instagram presence (Hump Lump, 2026b). This wasn't just administrative work; it was the creation of a fully-fledged online presence—a cohesive ecosystem where festival programmers and audiences can instantly grasp the "vibe" and ethos of Hump Lump before even entering the theatre.
                    </p>
                 </div>
              </div>
@@ -504,10 +555,10 @@ export default function App() {
                 <h3 className="font-heading text-3xl sm:text-5xl mb-10 uppercase italic text-lump-black">3.3 DECONSTRUCTING THE "ALPHA": SATIRE AS A WEAPON</h3>
                 <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-8">
                    <p>
-                     Thematic exploration in <span className="italic">6, Maybe 7 Skits</span> centered on the absurdity of modern politics, pop culture, and toxic masculinity. I authored the Podcast Skit as a direct parody of four distinct corners of modern internet masculinity.
+                     Thematic exploration in <span className="italic">6, Maybe 7 Skits</span> centered on the absurdity of modern politics, pop culture, and toxic masculinity. Oddey (1994) argues that devised theatre is uniquely positioned to explore deeply personal socio-political issues, a principle that guided my writing for two specific sequences: the "Podcast Skit" and the "Looksmaxxing Musical."
                    </p>
                    <p>
-                     Transforming this deeply isolating internet subculture into a highly physical, absurd musical number was a radical act of theatrical reclamation. By combining the traumatic reality of these internet pipelines with the ridiculousness of clowning, we forced the audience to laugh at these power structures, effectively deconstructing the "Alpha" myth in real-time.
+                     I authored the Podcast Skit as a direct parody of four distinct corners of modern internet masculinity. By placing these four highly problematic archetypes in a room together, the satire exposed the hypocrisies of each. However, the work reached its most poignant level during the devising of the "Looksmaxxing" sequence. Drawing on my own experiences as a young, impressionable man who fell into the looksmaxxing pipeline—a culture designed to make young men feel entirely worthless if they do not achieve physical perfection—we used satire to disempower the narrative. Transforming this deeply isolating internet subculture into a highly physical, absurd musical number was a radical act of theatrical reclamation. By applying Sanford Meisner's principles of mechanical preparation, we learned the physical mechanics flatly so we wouldn't subconsciously lock in rhythms, allowing our bodies to react naturally and spontaneously to the absurdity in the moment (Meisner and Longwell, 1987). By combining the traumatic reality of these internet pipelines with the ridiculousness of clowning, we laughed at these power structures, effectively deconstructing the "Alpha Male" in real-time.
                    </p>
                 </div>
              </div>
@@ -528,7 +579,7 @@ export default function App() {
                 <div className="print-no-break">
                    <h3 className="font-heading text-2xl sm:text-4xl mb-6 uppercase border-l-8 border-lump-pink pl-6">4.1 EVALUATING THE PROOF OF CONCEPT AND PHYSICAL RISK</h3>
                    <p className="font-comic text-lg sm:text-2xl leading-relaxed opacity-80">
-                     Our May 5th, 2026, proof-of-concept performance served as a vital stress test for both our dramaturgical intentions and our physical safety protocols. Pushing the boundaries of physical comedy—such as the aggressive lifting—carried inherent risks. However, our rigorous Risk Assessment protocols proved highly effective. The physical extremity of these moments did not result in injury, but rather succeeded in shocking the audience.
+                     Our May 5th, 2026, proof-of-concept performance served as a vital stress test for both our dramaturgical intentions and our physical safety protocols. Pushing the boundaries of physical comedy—such as the aggressive lifting of an ensemble member prior to the injection sequence, the slip hazards of using cereal to represent raw meat, and the fight sequence during the podcast sequence carried inherent risks. However, our rigorous Risk Assessment protocols, including pre-show walk-throughs at half-speed and designated barefoot performance requirements, proved highly effective. The physical extremity of these moments did not result in injury, but rather succeeded in providing slapstick humor in a safe, effective way.
                    </p>
                 </div>
 
@@ -540,24 +591,37 @@ export default function App() {
                           Reflecting on the evolution from Semester 1 to Semester 2, the most significant growth has been our company's relationship with perfection. In Prudencia Hart, I struggled when staging became "messy". However, through Hump Lump, we have learned to weaponize that messiness.
                         </p>
                         <p>
-                          Greig argues that Rough Theatre should be "written fast, rehearsed fast and performed fast," and crucially, that "It would be unfinished" (Greig, n.d.). By titling the show 6, Maybe 7 Skits, we baked this "unfinished" quality directly into the premise.
+                          David Greig's Rough Theatre Manifesto perfectly articulates this shift in our methodology. Greig argues that Rough Theatre should be "written fast, rehearsed fast and performed fast," and crucially, that "It would be unfinished" (Greig, n.d.). By titling the show <span className="italic font-bold">6, Maybe 7 Skits</span>, we baked this "unfinished" quality directly into the premise.
                         </p>
                       </div>
                       <div className="border-4 border-lump-black rounded-[2rem] overflow-hidden shadow-[8px_8px_0_rgba(0,0,0,1)] print:shadow-none">
-                         <img 
-                           src="https://raw.githubusercontent.com/JollyLegend/humplump-pictures/59a593b7155392aa49acf56670451cc569a9d296/Misc/Rough%20Theatre%20Manifesto.png" 
-                           alt="Rough Theatre Manifesto"
-                           className="w-full h-auto"
-                         />
+                         <a href="https://winchester.instructure.com/courses/23358/pages/rough-theatre-manifesto-by-david-greig" target="_blank" rel="noopener noreferrer">
+                            <img 
+                              src="https://raw.githubusercontent.com/JollyLegend/humplump-pictures/59a593b7155392aa49acf56670451cc569a9d296/Misc/Rough%20Theatre%20Manifesto.png" 
+                              alt="Rough Theatre Manifesto"
+                              className="w-full h-auto hover:scale-105 transition-transform"
+                            />
+                         </a>
                       </div>
                    </div>
                 </div>
 
                 <div className="print-no-break">
                    <h3 className="font-heading text-2xl sm:text-4xl mb-6 uppercase border-l-8 border-lump-orange pl-6">4.3 THE 45-MINUTE ROADMAP</h3>
-                   <p className="font-comic text-lg sm:text-2xl leading-relaxed opacity-80">
-                     I propose targeting the Camden Fringe and Brighton Fringe as initial testing grounds. Both festivals possess a high tolerance for boundary-pushing, alternative clowning, and their pub-theatre venues perfectly match our acoustic, zero-tech aesthetic. Ultimately, Hump Lump is ready to take 6, Maybe 7 Skits out of the university context. We have built a production that is cheap, fast, deeply critical, and highly physical.
-                   </p>
+                   <div className="font-comic text-lg sm:text-2xl leading-relaxed opacity-80 space-y-6">
+                     <p>
+                       To take this 45-minute production on the upcoming festival circuit, our touring strategy must align directly with Greig’s mandate that theatre should "take place in rough spaces... take over spaces and demand that they become theatres" (Greig, n.d.). Because our technical rider requires only a clear, flat surface, house lights, and a 20-minute turnaround, we are highly adaptable.
+                     </p>
+                     <p>
+                       I propose targeting the Camden Fringe and Brighton Fringe as initial testing grounds. Both festivals possess a high tolerance for boundary-pushing, alternative clowning, and their pub-theatre venues perfectly match our acoustic, zero-tech aesthetic. 
+                      </p>
+                      <p>
+                        However, taking a show that aggressively deconstructs toxic masculinity and volatile political figures requires careful curation. Our living manifesto and marketing must clearly signal that we are satirizing the 'Sigma' grindset and dangerous online ECHO-chambers. Because we deal with adult themes and potentially triggering internet pipelines, we must provide clear, stylised content warnings within our promotional material and programmes. 
+                      </p>
+                      <p>
+                        Our material is modular, and Hump Lump is prepared to swap out skits to keep the show responding to the current news cycle—fully answering the call to demand that any empty space can, and must, become a theatre. Ultimately, Hump Lump is ready to take 6, Maybe 7 Skits out of the university context. We have built a production that is cheap, fast, deeply critical, and highly physical.
+                     </p>
+                   </div>
                 </div>
              </div>
           </section>
@@ -565,13 +629,16 @@ export default function App() {
           <section className="bg-lump-pink/10 border-8 border-lump-black p-8 sm:p-16 rounded-[3rem] print-no-break">
              <h2 className="font-heading font-black text-4xl sm:text-7xl mb-12 uppercase text-lump-pink drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">BIBLIOGRAPHY</h2>
              <ul className="font-comic text-base sm:text-xl space-y-4 opacity-80 list-disc list-inside">
-                <li>Balcerzak, S. (2018) Beyond Method: Stella Adler and the Male Actor. Chicago: Wayne State University Press.</li>
-                <li>Graham, S. and Hoggett, S. (2014) The Frantic Assembly Book of Devising Theatre. 2nd edn. New York: Routledge.</li>
-                <li>Greig, D. (2011) The Strange Undoing of Prudencia Hart. London: Faber and Faber.</li>
-                <li>Greig, D. (n.d.) Rough Theatre Manifesto. [Online]. University of Winchester Canvas.</li>
-                <li>Meisner, S. and Longwell, D. (1987) Sanford Meisner on Acting. New York: Vintage Books.</li>
-                <li>Oddey, A. (1994) Devising Theatre: A Practical and Theoretical Handbook. London: Routledge.</li>
-                <li>Rodenburg, P. (2008) The Second Circle. New York: W.W. Norton & Company.</li>
+                <li>Balcerzak, S. (2018) <span className="italic">Beyond Method: Stella Adler and the Male Actor.</span> Chicago: Wayne State University Press.</li>
+                <li>Graham, S. and Hoggett, S. (2014) <span className="italic">The Frantic Assembly Book of Devising Theatre.</span> 2nd edn. New York: Routledge.</li>
+                <li>Greig, D. (2011) <span className="italic">The Strange Undoing of Prudencia Hart.</span> London: Faber and Faber.</li>
+                <li>Greig, D. (n.d.) <span className="italic">Rough Theatre Manifesto.</span> [Online]. University of Winchester Canvas. Available at: <a href="https://winchester.instructure.com/courses/23358/pages/rough-theatre-manifesto-by-david-greig" target="_blank" rel="noopener noreferrer" className="underline text-xs sm:text-lg">winchester.instructure.com/courses/23358</a> (Accessed: 18 May 2026).</li>
+                <li>Hump Lump (2026a) <span className="italic">Hump Lump.</span> Available at: <a href="http://humplump.com" target="_blank" rel="noopener noreferrer" className="underline">humplump.com</a> (Accessed: 18 May 2026).</li>
+                <li>Hump Lump (2026b) <span className="italic">Hump Lump [Instagram].</span> Available at: <a href="https://www.instagram.com/hump.lump/" target="_blank" rel="noopener noreferrer" className="underline">instagram.com/hump.lump/</a> (Accessed: 18 May 2026).</li>
+                <li>Meisner, S. and Longwell, D. (1987) <span className="italic">Sanford Meisner on Acting.</span> New York: Vintage Books.</li>
+                <li>Oddey, A. (1994) <span className="italic">Devising Theatre: A Practical and Theoretical Handbook.</span> London: Routledge.</li>
+                <li>Rodenburg, P. (2008) <span className="italic">The Second Circle: How to Use Positive Energy for Success in Every Situation.</span> New York: W.W. Norton & Company.</li>
+                <li>Smith, P. (2018) <span className="italic">Making Site-Specific Theatre and Performance: A Handbook.</span> London: Red Globe Press.</li>
              </ul>
           </section>
         </section>
