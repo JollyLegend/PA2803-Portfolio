@@ -171,28 +171,28 @@ const RiskAssessmentRow: React.FC<RiskAssessmentRowProps> = ({ risk }) => (
       </div>
       
       {/* Scores - VERTICAL STACKED */}
-      <div className="p-4 bg-[#1a1a1a] text-white flex flex-col justify-around gap-4 divide-y-2 divide-white/10 shrink-0 sm:min-w-[80px]">
+      <div className="p-4 bg-[#1a1a1a] text-white flex flex-col justify-around gap-4 divide-y-2 divide-white/10 shrink-0 sm:min-w-[100px]">
         {/* Initial Score */}
-        <div className="flex flex-col items-center gap-1 py-2">
-           <span className="font-heading text-[10px] tracking-widest opacity-40 uppercase mb-2">INITIAL</span>
+        <div className="flex flex-col items-center gap-1 py-1">
+           <span className="font-heading text-[10px] tracking-widest opacity-40 uppercase mb-1">INITIAL</span>
            <div className="flex flex-col items-center space-y-1">
-              <span className={`text-lg font-bold leading-none ${risk.initial.RS >= 12 ? 'text-red-400' : risk.initial.RS >= 8 ? 'text-orange-400' : 'text-green-400'}`}>L {risk.initial.L}</span>
+              <span className={`text-xl font-bold leading-none ${risk.initial.RS >= 12 ? 'text-red-400' : risk.initial.RS >= 6 ? 'text-orange-400' : 'text-green-400'}`}>L {risk.initial.L}</span>
               <span className="text-[10px] opacity-20 leading-none">×</span>
-              <span className={`text-lg font-bold leading-none ${risk.initial.RS >= 12 ? 'text-red-400' : risk.initial.RS >= 8 ? 'text-orange-400' : 'text-green-400'}`}>S {risk.initial.S}</span>
+              <span className={`text-xl font-bold leading-none ${risk.initial.RS >= 12 ? 'text-red-400' : risk.initial.RS >= 6 ? 'text-orange-400' : 'text-green-400'}`}>S {risk.initial.S}</span>
               <span className="text-[10px] opacity-20 leading-none">=</span>
-              <span className={`text-2xl font-black leading-none ${risk.initial.RS >= 12 ? 'text-red-500' : risk.initial.RS >= 8 ? 'text-orange-500' : 'text-green-500'}`}>RS {risk.initial.RS}</span>
+              <span className={`text-3xl font-black leading-none ${risk.initial.RS >= 12 ? 'text-red-500' : risk.initial.RS >= 6 ? 'text-orange-500' : 'text-green-500'}`}>RS {risk.initial.RS}</span>
            </div>
         </div>
         
         {/* Target Score */}
-        <div className="flex flex-col items-center gap-1 py-4">
-           <span className="font-heading text-[10px] tracking-widest opacity-40 uppercase mb-2">TARGET</span>
+        <div className="flex flex-col items-center gap-1 py-3">
+           <span className="font-heading text-[10px] tracking-widest opacity-40 uppercase mb-1">TARGET</span>
            <div className="flex flex-col items-center space-y-1">
-              <span className={`text-lg font-bold leading-none ${risk.target.RS >= 12 ? 'text-red-400' : risk.target.RS >= 8 ? 'text-orange-400' : 'text-green-400'}`}>L {risk.target.L}</span>
+              <span className={`text-xl font-bold leading-none ${risk.target.RS >= 12 ? 'text-red-400' : risk.target.RS >= 6 ? 'text-orange-400' : 'text-green-400'}`}>L {risk.target.L}</span>
               <span className="text-[10px] opacity-20 leading-none">×</span>
-              <span className={`text-lg font-bold leading-none ${risk.target.RS >= 12 ? 'text-red-400' : risk.target.RS >= 8 ? 'text-orange-400' : 'text-green-400'}`}>S {risk.target.S}</span>
+              <span className={`text-xl font-bold leading-none ${risk.target.RS >= 12 ? 'text-red-400' : risk.target.RS >= 6 ? 'text-orange-400' : 'text-green-400'}`}>S {risk.target.S}</span>
               <span className="text-[10px] opacity-20 leading-none">=</span>
-              <span className={`text-2xl font-black leading-none ${risk.target.RS >= 12 ? 'text-red-500' : risk.target.RS >= 8 ? 'text-orange-500' : 'text-green-500'}`}>RS {risk.target.RS}</span>
+              <span className={`text-3xl font-black leading-none ${risk.target.RS >= 12 ? 'text-red-500' : risk.target.RS >= 6 ? 'text-orange-500' : 'text-green-500'}`}>RS {risk.target.RS}</span>
            </div>
         </div>
       </div>
@@ -252,7 +252,7 @@ export default function App() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 print:max-w-none print:px-0 print:py-0 print:bg-white">
         
         {/* PAGE 1: CONDENSED COVER + MEDIA + CREW */}
-        <section className="min-h-screen flex flex-col space-y-24 sm:space-y-32 py-12">
+        <section className="flex flex-col space-y-12 sm:space-y-32 py-12 print:py-0 print:space-y-8">
           <div className="text-center space-y-4">
              <div className="flex justify-center items-center gap-0 font-heading font-black text-5xl sm:text-7xl">
                 <span className="text-lump-pink">HUMP</span>
@@ -302,7 +302,7 @@ export default function App() {
         </section>
 
         {/* PAGE 2: INTRODUCTION & PART 1 */}
-        <div className="mt-24 sm:mt-48 space-y-20 sm:space-y-32">
+        <div className="mt-8 sm:mt-24 space-y-12 sm:space-y-32 print:mt-4 print:space-y-8">
           <section className="bg-lump-black text-white p-10 sm:p-16 rounded-[2.5rem] border-8 border-lump-pink shadow-[15px_15px_0_rgba(0,0,0,1)] print-no-break">
              <div className="flex justify-between items-start mb-8 sm:mb-12">
                <h2 className="font-heading font-black text-4xl sm:text-7xl uppercase text-white">INTRODUCTION</h2>
@@ -321,7 +321,7 @@ export default function App() {
              </div>
           </section>
 
-          <section className="print-page-break border-12 border-lump-black bg-white rounded-[4rem] p-12 sm:p-24 shadow-[20px_20px_0_rgba(0,0,0,1)] relative overflow-hidden print:shadow-none">
+          <section className="border-12 border-lump-black bg-white rounded-[4rem] p-12 sm:p-24 shadow-[20px_20px_0_rgba(0,0,0,1)] relative overflow-hidden print:shadow-none print:p-12 print:rounded-[2rem] print:border-8">
             <div className="absolute top-10 right-10 flex items-center gap-4 font-heading text-xl sm:text-3xl no-print">
               <span className="text-lump-pink">PART 1: THE PITCH</span>
             </div>
@@ -400,12 +400,12 @@ export default function App() {
         </div>
 
         {/* PAGE 5: TECHNICAL & RISK ASSESSMENT */}
-        <section className="print-page-break mt-32 sm:mt-56 space-y-24 sm:space-y-32">
+        <section className="print-page-break mt-16 sm:mt-56 space-y-16 sm:space-y-32">
           <div className="text-center">
-             <h2 className="font-heading font-black text-5xl sm:text-8xl p-4 bg-lump-black text-white inline-block uppercase rotate-1">TECHNICAL SPECS</h2>
+             <h2 className="font-heading font-black text-4xl sm:text-8xl p-4 bg-lump-black text-white inline-block uppercase rotate-1">TECHNICAL SPECS</h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10">
             {[
               { label: "SHOW DURATION", value: "45 Minutes", color: "bg-lump-pink" },
               { label: "SET UP / STRIKE", value: "20 Minutes Each", color: "bg-lump-blue" },
@@ -416,19 +416,19 @@ export default function App() {
               { label: "ACCESS NEEDS", value: "None", color: "bg-white" },
               { label: "TECH REQUIREMENTS", value: "Fully Self-Sufficient", color: "bg-lump-pink text-white" }
             ].map((spec, i) => (
-              <div key={i} className={`${spec.color} border-4 border-lump-black p-4 sm:p-6 rounded-2xl shadow-[6px_6px_0_rgba(0,0,0,1)] print:shadow-none print-no-break`}>
-                <h4 className="font-heading text-lg sm:text-2xl mb-2 sm:mb-4 uppercase opacity-60">{spec.label}</h4>
+              <div key={i} className={`${spec.color} border-4 border-lump-black p-3 sm:p-6 rounded-2xl shadow-[6px_6px_0_rgba(0,0,0,1)] print:shadow-none print-no-break`}>
+                <h4 className="font-heading text-base sm:text-2xl mb-1 sm:mb-4 uppercase opacity-60 leading-none">{spec.label}</h4>
                 {spec.label === "HOST FEES & CONTACT" ? (
-                  <a href={`mailto:${spec.value}`} className="font-comic text-xl sm:text-3xl font-black break-words underline decoration-2 underline-offset-4 hover:text-white transition-colors">
+                  <a href={`mailto:${spec.value}`} className="font-comic text-lg sm:text-3xl font-black break-words underline decoration-2 underline-offset-4 hover:text-white transition-colors">
                     {spec.value}
                   </a>
                 ) : (
-                  <p className="font-comic text-xl sm:text-3xl font-black break-words">{spec.value}</p>
+                  <p className="font-comic text-lg sm:text-3xl font-black break-words">{spec.value}</p>
                 )}
               </div>
             ))}
           </div>
-          <div className="mt-16 sm:mt-32 border-8 border-lump-black rounded-[3rem] overflow-hidden bg-lump-yellow shadow-[15px_15px_0_rgba(0,0,0,1)] print:shadow-none print:bg-white">
+          <div className="mt-12 sm:mt-32 border-8 border-lump-black rounded-[2rem] sm:rounded-[3rem] overflow-hidden bg-lump-yellow shadow-[15px_15px_0_rgba(0,0,0,1)] print:shadow-none print:bg-white print:border-6">
             <div className="p-6 sm:p-10 flex flex-col md:flex-row justify-between items-center gap-6">
                <h2 className="font-heading font-black text-5xl sm:text-8xl uppercase text-lump-black drop-shadow-[4px_4px_0_rgba(0,0,0,0.1)]">RISK ASSESSMENT</h2>
                <div className="bg-lump-black text-white px-6 py-3 rounded-full font-heading text-sm sm:text-base tracking-widest uppercase border-4 border-white/20">
@@ -447,7 +447,7 @@ export default function App() {
         {/* PAGE 6: PRUDENCIA HART & DEVISING PROCESS */}
         <div className="print-page-break mt-32 sm:mt-56 space-y-32 sm:space-y-48">
           
-          <section className="bg-white border-12 border-lump-black rounded-[4rem] p-12 sm:p-24 shadow-[20px_20px_0_rgba(255,138,0,1)] print:shadow-none print-no-break">
+          <section className="bg-white border-8 sm:border-12 border-lump-black rounded-[2rem] sm:rounded-[4rem] p-10 sm:p-24 shadow-[20px_20px_0_rgba(255,138,0,1)] print:shadow-none print-no-break print:p-12 print:border-8">
              <div className="flex justify-between items-center mb-12 sm:mb-20">
                 <div>
                    <p className="font-heading text-xl sm:text-3xl text-lump-orange uppercase">PART 2</p>
@@ -516,7 +516,7 @@ export default function App() {
 
         {/* PAGE 8: EVALUATION & FUTURE ROADMAP */}
         <section className="print-page-break mt-32 sm:mt-56 space-y-24 sm:space-y-48">
-          <section className="bg-white border-12 border-lump-black rounded-[4rem] p-12 sm:p-24 shadow-[20px_20px_0_rgba(0,0,0,1)] print:shadow-none print-no-break">
+          <section className="bg-white border-8 sm:border-12 border-lump-black rounded-[2rem] sm:rounded-[4rem] p-10 sm:p-24 shadow-[20px_20px_0_rgba(0,0,0,1)] print:shadow-none print-no-break print:p-12 print:border-8">
              <div className="flex justify-between items-center mb-16 sm:mb-24">
                 <div>
                    <p className="font-heading text-xl sm:text-3xl text-lump-pink uppercase italic">PART 4</p>
@@ -583,9 +583,9 @@ export default function App() {
              <span className="font-heading text-xl sm:text-4xl text-lump-blue uppercase italic">PART 5</span>
           </div>
 
-          <div className="columns-1 sm:columns-2 gap-8 space-y-8">
+          <div className="columns-1 sm:columns-2 gap-4 sm:gap-8 space-y-4 sm:space-y-8 print:columns-2 print:gap-4 print:space-y-4">
             {GALLERY_IMAGES.map((img, i) => (
-              <div key={i} className="break-inside-avoid border-6 border-lump-black rounded-[2rem] overflow-hidden shadow-[8px_8px_0_rgba(0,0,0,1)] bg-white group print:shadow-none print-no-break">
+              <div key={i} className="break-inside-avoid border-4 sm:border-6 border-lump-black rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-[8px_8px_0_rgba(0,0,0,1)] bg-white group print:shadow-none print-no-break print:border-4">
                 <img src={img.url} className="w-full" />
                 <div className="p-4 sm:p-6 bg-white border-t-6 border-lump-black font-heading text-lg sm:text-2xl uppercase italic text-center">
                    {img.caption}
