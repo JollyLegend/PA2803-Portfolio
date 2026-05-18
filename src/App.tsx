@@ -287,18 +287,18 @@ export default function App() {
             <h2 className="font-heading font-black text-2xl sm:text-4xl text-center uppercase border-b-4 border-lump-black pb-2 opacity-50">DIGITAL PORTFOLIO</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
               {[
-                { label: "PROOF OF CONCEPT", desc: "30 Minute Video", icon: <Play />, color: "bg-lump-blue", link: "#" },
-                { label: "OFFICIAL TRAILER", desc: "80 Second Trailer", icon: <Tv />, color: "bg-lump-pink", link: "#" },
-                { label: "HUMPLUMP.COM", desc: "Live Website", icon: <ExternalLink />, color: "bg-lump-orange", link: "#" },
-                { label: "@HUMP.LUMP", desc: "Instagram", icon: <Users />, color: "bg-lump-green", link: "#" }
+                { label: "PROOF OF CONCEPT", desc: "30 Minute Video", icon: <Play />, color: "bg-lump-blue", link: "https://www.humplump.com/media" },
+                { label: "OFFICIAL TRAILER", desc: "80 Second Trailer", icon: <Tv />, color: "bg-lump-pink", link: "https://www.humplump.com/media" },
+                { label: "HUMPLUMP.COM", desc: "Live Website", icon: <ExternalLink />, color: "bg-lump-orange", link: "https://www.humplump.com" },
+                { label: "@HUMP.LUMP", desc: "Instagram", icon: <Users />, color: "bg-lump-green", link: "https://www.instagram.com/hump.lump/" }
               ].map((btn, i) => (
-                <div key={i} className={`${btn.color} border-4 border-lump-black p-4 rounded-2xl shadow-[4px_4px_0_rgba(0,0,0,1)] flex flex-col items-center justify-center text-center gap-2`}>
+                <a key={i} href={btn.link} target="_blank" rel="noopener noreferrer" className={`${btn.color} border-4 border-lump-black p-4 rounded-2xl shadow-[4px_4px_0_rgba(0,0,0,1)] flex flex-col items-center justify-center text-center gap-2 transition-transform hover:scale-105`}>
                   <div className="bg-white/20 p-2 rounded-full border-2 border-lump-black/10">
                     {btn.icon}
                   </div>
                   <span className="font-heading text-lg sm:text-xl font-black leading-tight uppercase">{btn.label}</span>
                   <span className="font-comic text-xs sm:text-sm font-bold opacity-70 uppercase">{btn.desc}</span>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -360,7 +360,7 @@ export default function App() {
             {/* VIDEO LINKS SECTION */}
             <div className="mt-12 sm:mt-20 text-center print:hidden">
                <p className="font-comic text-xl sm:text-4xl leading-relaxed max-w-4xl mx-auto">
-                  Click here to watch the <span className="text-lump-blue font-black underline cursor-pointer decoration-4 underline-offset-8">30 minute proof of concept</span>, as well as watch the <span className="text-lump-pink font-black underline cursor-pointer decoration-4 underline-offset-8">80 second trailer</span>.
+                  Click here to watch the <a href="https://www.humplump.com/media" target="_blank" rel="noopener noreferrer" className="text-lump-blue font-black underline decoration-4 underline-offset-8 hover:text-lump-pink transition-colors">30 minute proof of concept</a>, as well as watch the <a href="https://www.humplump.com/media" target="_blank" rel="noopener noreferrer" className="text-lump-pink font-black underline decoration-4 underline-offset-8 hover:text-lump-blue transition-colors">80 second trailer</a>.
                </p>
             </div>
 
@@ -438,7 +438,13 @@ export default function App() {
             ].map((spec, i) => (
               <div key={i} className={`${spec.color} border-4 border-lump-black p-4 sm:p-6 rounded-2xl shadow-[6px_6px_0_rgba(0,0,0,1)] print:shadow-none print-no-break`}>
                 <h4 className="font-heading text-lg sm:text-2xl mb-2 sm:mb-4 uppercase opacity-60">{spec.label}</h4>
-                <p className="font-comic text-xl sm:text-3xl font-black break-words">{spec.value}</p>
+                {spec.label === "HOST FEES & CONTACT" ? (
+                  <a href={`mailto:${spec.value}`} className="font-comic text-xl sm:text-3xl font-black break-words underline decoration-2 underline-offset-4 hover:text-white transition-colors">
+                    {spec.value}
+                  </a>
+                ) : (
+                  <p className="font-comic text-xl sm:text-3xl font-black break-words">{spec.value}</p>
+                )}
               </div>
             ))}
           </div>
