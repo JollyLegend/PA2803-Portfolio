@@ -42,17 +42,17 @@ const TEAM = [
   },
   { 
     name: "Calvin", 
-    color: "bg-lump-blue", 
+    color: "bg-lump-yellow", 
     image: "https://raw.githubusercontent.com/JollyLegend/humplump-pictures/420954d499707ed278b5855f878e251d6f62231f/Crew/Calvin.jpg" 
   },
   { 
     name: "Hayden", 
-    color: "bg-lump-orange", 
+    color: "bg-lump-green", 
     image: "https://raw.githubusercontent.com/JollyLegend/humplump-pictures/d0a49d1b74e8be88bfe74114b0e152f9161c724f/Crew/Hayden.jpg" 
   },
   { 
     name: "Jonathan", 
-    color: "bg-lump-green", 
+    color: "bg-lump-blue", 
     image: "https://raw.githubusercontent.com/JollyLegend/humplump-pictures/refs/heads/main/Crew/Jonathan.jpg" 
   },
 ];
@@ -310,7 +310,7 @@ export default function App() {
              </div>
              <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-6 sm:space-y-8 opacity-90">
                <p>
-                 This portfolio documents the culmination of my training in PA2803 at the University of Winchester, tracing the evolution of my devising practice across two semesters. It charts a critical journey from the initial challenges of site-specific improvisation in <span className="italic text-lump-blue underline">The Strange Undoing of Prudencia Hart</span> to the formation of Hump Lump, a dedicated devised theatre company.
+                 This portfolio documents the culmination of my training in PA2803 at the University of Winchester, tracing the evolution of my devising practice across two semesters. It charts a critical journey from the initial challenges of site-specific improvisation in <span className="italic text-lump-blue underline">The Strange Undoing of Prudencia Hart (Greig, 2011)</span> to the formation of <span className="italic text-lump-blue underline">Hump Lump</span> a dedicated devised theatre company.
                </p>
                <p>
                  By synthesizing academic theory with rigorous practical exploration, this document outlines how I transformed critical feedback regarding dramaturgical focus into a deliberate, physical methodology rooted in Rough Theatre, clowning, and political satire.
@@ -365,22 +365,6 @@ export default function App() {
                   <p className="font-comic text-xl sm:text-4xl leading-relaxed">
                     Feeling numb to the chaos of the world? 6 or 7 Skits throws politics, pop culture and modern masculinity into a clown-filled playground of satire. Through verbatim, puppetry, absurdism, music and audience interaction, Hump Lump turns real events into ridiculous, uncomfortable and strangely recognisable theatre.
                   </p>
-               </div>
-
-               {/* STYLE & THEMES */}
-               <div className="border-6 border-lump-black p-8 sm:p-12 rounded-[2.5rem] bg-lump-orange/10 print:break-inside-avoid relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                     <Music className="w-16 h-16 text-lump-orange" />
-                  </div>
-                  <h3 className="font-heading text-3xl sm:text-6xl text-lump-orange mb-8 uppercase text-center sm:text-left">STYLE & THEMES</h3>
-                  <div className="space-y-6 sm:space-y-10">
-                     <p className="font-comic text-xl sm:text-4xl leading-relaxed">
-                        The company's style combines clowning, rough theatre, verbatim material, puppetry, absurdism, repetition and musicality. Costume changes happen in view, and the fourth wall is broken.
-                     </p>
-                     <p className="font-comic text-xl sm:text-4xl leading-relaxed border-t-4 border-lump-orange/20 pt-6 sm:pt-10">
-                        Thematically, the work is connected through masculinity. As four male performers, the company uses satire to question the performance of male power, authority, ego, and fragility.
-                     </p>
-                  </div>
                </div>
 
                {/* PROJECT SYNOPSIS */}
@@ -505,16 +489,16 @@ export default function App() {
              
              <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-8 opacity-90">
                 <p>
-                  The exploration of David Greig's <span className="italic font-bold">The Strange Undoing of Prudencia Hart</span> (Greig, 2011) served as my introduction to the devising process. Coming from a background of traditional script-work, the absence of a rigid, pre-determined structure initially presented a significant challenge. Alison Oddey (1994) articulates that devised theatre shifts the emphasis away from the single vision of a playwright toward the collective creation of the ensemble. Learning to trust this collective process—and finding my place within it through rigorous improv—required a fundamental shift in my approach to performance, moving away from individual preparation and toward active, moment-to-moment responsiveness.
+                  The exploration of David Greig's <span className="italic font-bold">The Strange Undoing of Prudencia Hart</span> (Greig, 2011) served as my introduction to the devising process. Coming from a background of traditional script-work, the absence of a rigid structure initially presented a challenge. Alison Oddey (1994) articulates that devised theatre shifts the emphasis away from the single vision of a playwright toward the collective creation of the ensemble. Learning to trust this collective process and finding my place within it through improv required a fundamental shift in my approach to performance, moving away from individual preparation and toward active, moment-to-moment responsiveness.
                 </p>
                 <p>
-                  A defining element of overcoming this challenge was our immersion into site-specific methodology. As Phil Smith notes, "A site is always the site of something; with the implication that it is a kind of container for what is really important, for the valuable property that is in it but is different from the space itself" (Smith, 2018). We tested this theory practically by taking the text out of the rehearsal room and walking up St. Catherine's Hill. Experimenting with scenes using only the natural topography and the elements available on the hill forced a total renegotiation of the actor-audience relationship. We later applied this by experimenting with scenes across various locations on campus. By stripping away traditional lighting rigs and sound systems, the architecture of our surroundings became an active collaborator rather than a passive backdrop.
+                  A defining element of overcoming this challenge was our immersion into site-specific methodology. As Smith (2018) argues, a physical location is never merely empty space; rather, it functions as a conceptual container possessing its own inherent identity and history that extends far beyond its physical boundaries. We tested this theory practically by taking the text out of the rehearsal room and walking up St. Catherine's Hill. Experimenting with scenes using only the natural topography and the elements available on the hill forced a total renegotiation of the actor-audience relationship. We later applied this by experimenting with scenes across various locations on campus. By stripping away traditional lighting rigs and sound systems, the architecture of our surroundings became an active collaborator rather than a passive backdrop.
                 </p>
                 <p>
-                  However, performing in these exposed, site-specific environments revealed vulnerabilities in my practice. A crucial practical lesson learned during this module was the "7-second rule"—the necessity of introducing a new physical, vocal, or spatial shift every seven seconds to actively maintain the audience's attention and keep the work fresh. My PA2803 assessment feedback, which resulted in a 64% grade, highlighted that initially, my creative choices "focused too much on individual needs as opposed to the wider concerns of the play," and that while my staging choices were bold, they occasionally felt "messy" in delivery. I struggled to balance the rapid demands of the 7-second rule with a clear dramaturgical focus. It was also noted that it took me too long to identify these issues and adapt.
+                  However, performing in these exposed, site-specific environments revealed vulnerabilities in my practice. A crucial practical lesson learned during this module was the "7-second rule" the necessity of introducing a shift every seven seconds to actively maintain the audience's attention. My PA2803 assessment feedback, which resulted in a 64% grade, highlighted that initially, my creative choices "focused too much on individual needs as opposed to the wider concerns of the play," and that while my staging choices were bold, they occasionally felt "messy" in delivery. I struggled to balance the rapid demands of the 7-second rule with a clear dramaturgical focus. It was also noted that it took me too long to identify these issues and adapt.
                 </p>
                 <p>
-                  My marker correctly diagnosed that I needed to step outside the work and critique how the performance was landing from a dramaturgical perspective to allow the audience to truly invest in the piece. Ultimately, the work on Prudencia Hart demonstrated that devised theatre requires intense discipline. Entering Semester 2, addressing this blind spot—learning to execute rapid, engaging shifts without sacrificing the clarity of the story—became the central objective of my work with Hump Lump.
+                  My marker correctly diagnosed that I needed to step outside the work and critique how the performance was landing from a dramaturgical perspective to allow the audience to truly invest in the piece. Ultimately, the work on Prudencia Hart demonstrated that devised theatre requires intense discipline. Entering Semester 2, addressing this blind spot learning to execute rapid, engaging shifts without sacrificing the clarity of the story became the central objective of my work with Hump Lump.
                 </p>
              </div>
           </section>
@@ -529,7 +513,7 @@ export default function App() {
                 <h3 className="font-heading text-3xl sm:text-5xl mb-10 uppercase italic text-lump-black">3.1 STEPPING OUTSIDE THE EGO: THE CLOWN</h3>
                 <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-8">
                    <p>
-                     To actively address my Semester 1 feedback and ensure I was prioritizing the "wider concerns of the play", our company embraced the framework of the 'Personal Clown.' In my previous work, my default instinct was to rely on a "cool, guarded exterior," often using volume or intensity as a defensive armor against true vulnerability. However, unlike traditional character acting, the clown's primary relationship is exclusively with the audience. Demanding what Patsy Rodenburg (2008) defines as the "Second Circle"—a state of genuine, generous exchange where the actor's energy reaches out to touch the listener directly, rather than performing at them.
+                     To actively address my Semester 1 feedback and ensure I was prioritizing the "wider concerns of the play", our company embraced the framework of the 'Personal Clown.' In my previous work, my default instinct was to rely on a "cool, guarded exterior," often using volume or intensity as a defensive armor against true vulnerability. However, unlike traditional character acting, the clown's primary relationship is exclusively with the audience. Demanding what Patsy Rodenburg (2008) defines as the "Second Circle" a state of genuine, generous exchange where the actor's energy reaches out to touch the listener directly, rather than performing at them.
                    </p>
                    <p>
                      Through the devising process, I discovered my personal clown persona: the <span className="font-black italic underline">"Outsider."</span> This clown was highly excitable, eager to play, but fundamentally lacked a filter, constantly pushing the boundaries of the ensemble until he went too far. Embracing this foolishness was the ultimate destructuring of my ego. In the final skit, when the Outsider is reprimanded by the group and begins to cry, it abruptly shatters the chaotic comedy we had built. Because I had stripped away my need to sound impressive, I was able to trust my body's spontaneous impulses, dropping into a deeply vulnerable space.
@@ -542,10 +526,10 @@ export default function App() {
                 <h3 className="font-heading text-3xl sm:text-5xl mb-10 uppercase italic text-lump-black">3.2 ROUGH THEATRE AND THE TOTAL PLAYGROUND</h3>
                 <div className="font-comic text-lg sm:text-2xl leading-relaxed space-y-8">
                    <p>
-                     Our physical methodology was heavily informed by Peter Brook's concept of the "Empty Space" and the aesthetics of Rough Theatre. We stripped away traditional artifice, utilizing an 8x8m empty space, locked clothing racks, and visible costume changes. In my previous work with Theatre in Education, I struggled to fully embrace the unapologetic, unpolished silliness of Rough Theatre. However, by aligning my sensory, instinct-driven approach with Stella Adler’s demand that an actor focus entirely on external actions and immediate physical circumstances (Balcerzak, 2018), the 8x8m playground became a space of total freedom rather than exposure.
+                     Our physical methodology was heavily informed by Peter Brook's concept of the "Empty Space" and the aesthetics of Rough Theatre. We stripped away traditional artifice, utilizing an 8x8m empty space, clothing racks, and visible costume changes. In my previous work with Theatre in Education, I struggled to fully embrace the unapologetic, unpolished silliness of Rough Theatre. However, by aligning my sensory, instinct-driven approach with Stella Adler’s demand that an actor focus entirely on external actions and immediate physical circumstances (Balcerzak, 2018), the 8x8m playground became a space of total freedom rather than exposure.
                    </p>
                    <p>
-                     Furthermore, I realized that in modern devising, the "space" of a performance extends far beyond the physical room. Taking on the roles of digital architect and marketer, I built the company website <span className="underline">humplump.com</span> (Hump Lump, 2026a) and managed our Instagram presence (Hump Lump, 2026b). This wasn't just administrative work; it was the creation of a fully-fledged online presence—a cohesive ecosystem where festival programmers and audiences can instantly grasp the "vibe" and ethos of Hump Lump before even entering the theatre.
+                     Furthermore, I realized that in modern devising, the "space" of a performance extends far beyond the physical room. I built the company website <span className="underline">humplump.com</span> (Hump Lump, 2026a) and managed our Instagram presence <span className="underline">@hump.lump</span> (Hump Lump, 2026b). I dedicated a significant amount of time to meticulously editing both the proof-of-concept video and the promotional trailer to ensure they communicated the exact chaotic energy we strive for. A way that festival programmers and audiences can instantly grasp the vibe of Hump Lump before even entering the theatre. 
                    </p>
                 </div>
              </div>
@@ -558,7 +542,8 @@ export default function App() {
                      Thematic exploration in <span className="italic">6, Maybe 7 Skits</span> centered on the absurdity of modern politics, pop culture, and toxic masculinity. Oddey (1994) argues that devised theatre is uniquely positioned to explore deeply personal socio-political issues, a principle that guided my writing for two specific sequences: the "Podcast Skit" and the "Looksmaxxing Musical."
                    </p>
                    <p>
-                     I authored the Podcast Skit as a direct parody of four distinct corners of modern internet masculinity. By placing these four highly problematic archetypes in a room together, the satire exposed the hypocrisies of each. However, the work reached its most poignant level during the devising of the "Looksmaxxing" sequence. Drawing on my own experiences as a young, impressionable man who fell into the looksmaxxing pipeline—a culture designed to make young men feel entirely worthless if they do not achieve physical perfection—we used satire to disempower the narrative. Transforming this deeply isolating internet subculture into a highly physical, absurd musical number was a radical act of theatrical reclamation. By applying Sanford Meisner's principles of mechanical preparation, we learned the physical mechanics flatly so we wouldn't subconsciously lock in rhythms, allowing our bodies to react naturally and spontaneously to the absurdity in the moment (Meisner and Longwell, 1987). By combining the traumatic reality of these internet pipelines with the ridiculousness of clowning, we laughed at these power structures, effectively deconstructing the "Alpha Male" in real-time.
+                     I authored the Podcast Skit as a direct parody of four distinct corners of modern internet masculinity. By placing these four highly problematic archetypes in a room together, the satire exposed the hypocrisies of each. However, the work reached its most poignant level during the devising of the "Looksmaxxing" sequence. Drawing on my own experiences as a young, impressionable man who fell into the looksmaxxing pipeline, a culture designed to make young men feel entirely worthless if they do not achieve physical perfection, we used satire to disempower the narrative. Transforming this deeply isolating internet subculture into a highly physical, absurd musical number was an act of theatrical reclamation. By applying Sanford Meisner's principles of mechanical preparation, we learned the physical mechanics flatly so we wouldn't subconsciously lock in rhythms, allowing our bodies to react naturally and spontaneously to the absurdity in the moment (Meisner and Longwell, 1987). By combining the traumatic reality of these internet pipelines with the ridiculousness of clowning, we laughed at these power structures, effectively deconstructing the "Alpha Male" in real-time.
+
                    </p>
                 </div>
              </div>
@@ -579,7 +564,7 @@ export default function App() {
                 <div className="print-no-break">
                    <h3 className="font-heading text-2xl sm:text-4xl mb-6 uppercase border-l-8 border-lump-pink pl-6">4.1 EVALUATING THE PROOF OF CONCEPT AND PHYSICAL RISK</h3>
                    <p className="font-comic text-lg sm:text-2xl leading-relaxed opacity-80">
-                     Our May 5th, 2026, proof-of-concept performance served as a vital stress test for both our dramaturgical intentions and our physical safety protocols. Pushing the boundaries of physical comedy—such as the aggressive lifting of an ensemble member prior to the injection sequence, the slip hazards of using cereal to represent raw meat, and the fight sequence during the podcast sequence carried inherent risks. However, our rigorous Risk Assessment protocols, including pre-show walk-throughs at half-speed and designated barefoot performance requirements, proved highly effective. The physical extremity of these moments did not result in injury, but rather succeeded in providing slapstick humor in a safe, effective way.
+                     Our May 5th, 2026, proof-of-concept performance served as a vital stress test for both our dramaturgical intentions and our physical safety protocols. Pushing the boundaries of physical comedy such as the aggressive lifting of an ensemble member prior to the injection sequence, the slip hazards of using cereal to represent raw meat, and the fight sequence during the podcast sequence carried inherent risks. However, our rigorous Risk Assessment protocols, including pre-show walk-throughs at half-speed and designated barefoot performance requirements, proved highly effective. The physical extremity of these moments did not result in injury, but rather succeeded in providing slapstick humor in a safe, effective way.
                    </p>
                 </div>
 
@@ -588,10 +573,10 @@ export default function App() {
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                       <div className="font-comic text-lg sm:text-2xl leading-relaxed opacity-80 space-y-6">
                         <p>
-                          Reflecting on the evolution from Semester 1 to Semester 2, the most significant growth has been our company's relationship with perfection. In Prudencia Hart, I struggled when staging became "messy". However, through Hump Lump, we have learned to weaponize that messiness.
+                          Reflecting on the evolution from Semester 1 to Semester 2, the most significant growth has been our company’s relationship with perfection. In Prudencia Hart, I struggled when staging became "messy". However, through Hump Lump, we have learned to weaponize that messiness.
                         </p>
                         <p>
-                          David Greig's Rough Theatre Manifesto perfectly articulates this shift in our methodology. Greig argues that Rough Theatre should be "written fast, rehearsed fast and performed fast," and crucially, that "It would be unfinished" (Greig, n.d.). By titling the show <span className="italic font-bold">6, Maybe 7 Skits</span>, we baked this "unfinished" quality directly into the premise.
+                          David Greig’s Rough Theatre Manifesto perfectly articulates this shift in our methodology. Greig argues that Rough Theatre should be "written fast, rehearsed fast and performed fast," and crucially, that "It would be unfinished" (Greig, n.d.). By titling the show 6, Maybe 7 Skits, we baked this "unfinished" quality directly into the premise. If a transition is sloppy, if a prop crate is misplaced, or if we run out of time for the seventh skit, it is not a failure; it is an active demonstration of Rough Theatre. We are no longer hiding the mechanics of our survival on stage; we are highlighting them.
                         </p>
                       </div>
                       <div className="border-4 border-lump-black rounded-[2rem] overflow-hidden shadow-[8px_8px_0_rgba(0,0,0,1)] print:shadow-none">
@@ -613,13 +598,13 @@ export default function App() {
                        To take this 45-minute production on the upcoming festival circuit, our touring strategy must align directly with Greig’s mandate that theatre should "take place in rough spaces... take over spaces and demand that they become theatres" (Greig, n.d.). Because our technical rider requires only a clear, flat surface, house lights, and a 20-minute turnaround, we are highly adaptable.
                      </p>
                      <p>
-                       I propose targeting the Camden Fringe and Brighton Fringe as initial testing grounds. Both festivals possess a high tolerance for boundary-pushing, alternative clowning, and their pub-theatre venues perfectly match our acoustic, zero-tech aesthetic. 
+                       I propose targeting the Camden Fringe and Brighton Fringe as initial testing grounds. Both festivals possess a high tolerance for boundary-pushing, alternative clowning, and their pub-theatre venues perfectly match our acoustic, zero-tech aesthetic. Taking a show that aggressively deconstructs toxic masculinity and volatile political figures requires careful curation to ensure the satire lands correctly. We must use our digital presence as a living manifesto.  
                       </p>
                       <p>
-                        However, taking a show that aggressively deconstructs toxic masculinity and volatile political figures requires careful curation. Our living manifesto and marketing must clearly signal that we are satirizing the 'Sigma' grindset and dangerous online ECHO-chambers. Because we deal with adult themes and potentially triggering internet pipelines, we must provide clear, stylised content warnings within our promotional material and programmes. 
+                        Our marketing must clearly signal that we are satirizing the "Sigma" grindset, not endorsing it. Because the show explores adult themes and potentially triggering internet pipelines, we must provide clear, stylised content warnings in our festival blurbs. Furthermore, because politics and internet culture move rapidly, touring a tight 45-minute set requires us to keep the material modular. Leaning into Greig's idea that the work is "unfinished" (Greig, n.d.), we must be prepared to swap out skits during a festival run to respond to the current news cycle. 
                       </p>
                       <p>
-                        Our material is modular, and Hump Lump is prepared to swap out skits to keep the show responding to the current news cycle—fully answering the call to demand that any empty space can, and must, become a theatre. Ultimately, Hump Lump is ready to take 6, Maybe 7 Skits out of the university context. We have built a production that is cheap, fast, deeply critical, and highly physical.
+                        Ultimately, Hump Lump is ready to take 6, Maybe 7 Skits out of the university context. We have built a production that is cheap, fast, deeply critical, and highly physical, fully answering the call to demand that any empty space can, and must, become a theatre.
                      </p>
                    </div>
                 </div>
