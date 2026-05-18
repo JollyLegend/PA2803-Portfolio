@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply bg-lump-yellow text-lump-black font-sans antialiased selection:bg-lump-pink selection:text-white;
+    @apply bg-white text-lump-black font-sans antialiased selection:bg-lump-pink selection:text-white;
   }
 }
 
