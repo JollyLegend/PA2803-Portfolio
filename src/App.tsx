@@ -139,81 +139,61 @@ interface RiskAssessmentRowProps {
 const RiskAssessmentRow: React.FC<RiskAssessmentRowProps> = ({ risk }) => (
   <div className="flex border-4 border-lump-black rounded-[1.5rem] overflow-hidden bg-white mb-6 shadow-[8px_8px_0_rgba(0,0,0,1)] print:shadow-none print:break-inside-avoid">
     {/* ID Column */}
-    <div className={`${risk.color} w-24 sm:w-32 flex items-center justify-center border-r-4 border-lump-black`}>
-       <span className="font-heading text-3xl sm:text-5xl text-white drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">{risk.id}</span>
+    <div className={`${risk.color} w-16 sm:w-24 flex items-center justify-center border-r-4 border-lump-black shrink-0`}>
+       <span className="font-heading text-2xl sm:text-4xl text-white drop-shadow-[2px_2px_0_rgba(0,0,0,1)] -rotate-90">{risk.id}</span>
     </div>
     
     {/* Content Grid */}
-    <div className="flex-1 grid grid-cols-1 lg:grid-cols-4 divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-lump-black">
+    <div className="flex-1 grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_2fr_0.6fr] divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-lump-black">
       {/* Title & Description */}
-      <div className="p-6 sm:p-8 flex flex-col justify-center">
-        <h4 className="font-heading text-xl sm:text-2xl uppercase mb-2">{risk.title}</h4>
-        <p className="font-comic text-base sm:text-lg opacity-80 leading-snug">{risk.description}</p>
+      <div className="p-6 flex flex-col justify-center bg-white">
+        <h4 className="font-heading text-lg sm:text-xl uppercase mb-2 leading-tight">{risk.title}</h4>
+        <p className="font-comic text-sm sm:text-base opacity-70 leading-relaxed italic">{risk.description}</p>
       </div>
       
       {/* Affected */}
-      <div className="p-6 sm:p-8 flex flex-col justify-center">
-        <h5 className="font-heading text-xs uppercase opacity-40 mb-2">Affected</h5>
-        <p className="font-comic text-base sm:text-lg leading-snug">{risk.affected}</p>
+      <div className="p-6 flex flex-col justify-center bg-gray-50/50">
+        <h5 className="font-heading text-[10px] tracking-widest uppercase opacity-40 mb-3">Affected Persons</h5>
+        <p className="font-comic text-sm sm:text-base leading-snug font-bold">{risk.affected}</p>
       </div>
       
       {/* Control Measures */}
-      <div className="p-6 sm:p-8 col-span-1">
-        <h5 className="font-heading text-xs uppercase opacity-40 mb-4">Control Measures</h5>
-        <ul className="space-y-3">
+      <div className="p-6 bg-white">
+        <h5 className="font-heading text-[10px] tracking-widest uppercase opacity-40 mb-4">Control Measures</h5>
+        <ul className="space-y-2">
           {risk.controls.map((control, i) => (
-            <li key={i} className="flex gap-3 font-comic text-base sm:text-lg leading-tight">
-              <span className="text-lump-black/30">•</span>
+            <li key={i} className="flex gap-3 font-comic text-sm sm:text-base leading-tight">
+              <span className="text-lump-black/20 font-bold">»</span>
               {control}
             </li>
           ))}
         </ul>
       </div>
       
-      {/* Scores */}
-      <div className="p-6 sm:p-8 bg-[#f5f5f5] flex flex-col justify-between gap-6">
-        {/* Initial */}
-        <div className="flex flex-col items-center">
-          <h5 className="font-heading text-xs uppercase opacity-40 mb-3">Initial</h5>
-          <div className="flex items-center gap-4">
-             <div className="text-center">
-                <p className="text-[10px] font-heading opacity-40 uppercase">L</p>
-                <p className="text-xl sm:text-2xl font-bold text-red-500">{risk.initial.L}</p>
-             </div>
-             <p className="text-xl opacity-20">×</p>
-             <div className="text-center">
-                <p className="text-[10px] font-heading opacity-40 uppercase">S</p>
-                <p className="text-xl sm:text-2xl font-bold text-red-500">{risk.initial.S}</p>
-             </div>
-             <p className="text-xl opacity-20">=</p>
-             <div className="text-center">
-                <p className="text-[10px] font-heading text-red-500 uppercase">RS</p>
-                <p className="text-2xl sm:text-3xl font-black text-red-600">{risk.initial.RS}</p>
-             </div>
-          </div>
+      {/* Scores - VERTICAL STACKED */}
+      <div className="p-4 bg-[#1a1a1a] text-white flex flex-col justify-around gap-4 divide-y-2 divide-white/10 shrink-0">
+        {/* Initial Score */}
+        <div className="flex flex-col items-center gap-1 py-2">
+           <span className="font-heading text-[8px] tracking-widest opacity-40 uppercase">Initial</span>
+           <div className="flex flex-col items-center leading-none">
+              <span className="text-lg font-bold text-red-400">{risk.initial.L}</span>
+              <span className="text-[10px] opacity-30 my-0.5">×</span>
+              <span className="text-lg font-bold text-red-400">{risk.initial.S}</span>
+              <span className="text-[10px] opacity-30 my-0.5">=</span>
+              <span className="text-2xl font-black text-red-500">{risk.initial.RS}</span>
+           </div>
         </div>
         
-        <div className="h-px bg-lump-black/10 mx-4" />
-        
-        {/* Target */}
-        <div className="flex flex-col items-center">
-          <h5 className="font-heading text-xs uppercase opacity-40 mb-3">Target</h5>
-          <div className="flex items-center gap-4">
-             <div className="text-center">
-                <p className="text-[10px] font-heading opacity-40 uppercase">L</p>
-                <p className="text-xl sm:text-2xl font-bold text-green-500">{risk.target.L}</p>
-             </div>
-             <p className="text-xl opacity-20">×</p>
-             <div className="text-center">
-                <p className="text-[10px] font-heading opacity-40 uppercase">S</p>
-                <p className="text-xl sm:text-2xl font-bold text-green-500">{risk.target.S}</p>
-             </div>
-             <p className="text-xl opacity-20">=</p>
-             <div className="text-center">
-                <p className="text-[10px] font-heading text-green-500 uppercase">RS</p>
-                <p className="text-2xl sm:text-3xl font-black text-green-600">{risk.target.RS}</p>
-             </div>
-          </div>
+        {/* Target Score */}
+        <div className="flex flex-col items-center gap-1 py-4">
+           <span className="font-heading text-[8px] tracking-widest opacity-40 uppercase">Target</span>
+           <div className="flex flex-col items-center leading-none">
+              <span className="text-lg font-bold text-green-400">{risk.target.L}</span>
+              <span className="text-[10px] opacity-30 my-0.5">×</span>
+              <span className="text-lg font-bold text-green-400">{risk.target.S}</span>
+              <span className="text-[10px] opacity-30 my-0.5">=</span>
+              <span className="text-2xl font-black text-green-500">{risk.target.RS}</span>
+           </div>
         </div>
       </div>
     </div>
