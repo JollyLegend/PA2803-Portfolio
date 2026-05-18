@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Sour Gummy", cursive;
+  --font-comic: "Sour Gummy", cursive;
+  --font-sans: "Sour Gummy", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-lump-pink: #ff4bb3;
+  --color-lump-blue: #37b9ff;
+  --color-lump-yellow: #ffcc00;
+  --color-lump-orange: #ff8a00;
+  --color-lump-green: #0aff00;
+  --color-lump-black: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-lump-yellow text-lump-black font-sans antialiased selection:bg-lump-pink selection:text-white;
+  }
+}
+
+@layer utilities {
+  .text-stroke-4 {
+    -webkit-text-stroke: 4px black;
+  }
+  
+  .text-stroke-6 {
+    -webkit-text-stroke: 6px black;
+  }
+
+  .text-stroke-8 {
+    -webkit-text-stroke: 8px black;
+  }
+  
+  .text-stroke-2 {
+    -webkit-text-stroke: 2px black;
+  }
+
+  .sunburst-bg {
+    background: repeating-conic-gradient(
+      from 0deg,
+      #ffcc00 0deg 15deg,
+      #ff8a00 15deg 30deg
+    );
+  }
+  
+  .mask-fade {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  @media print {
+    .print-page-break {
+      break-before: page;
+    }
+    
+    .print-no-break {
+      break-inside: avoid;
+    }
+
+    body {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+  }
+}
